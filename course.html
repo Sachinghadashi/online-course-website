@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course</title>
+</head>
+<body>
+
+<h2 id="courseTitle"></h2>
+
+<iframe width="560" height="315"
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  allowfullscreen></iframe>
+
+<br><br>
+<button onclick="completeCourse()">Complete Course</button>
+
+<script>
+document.getElementById("courseTitle").innerText =
+  localStorage.getItem("course") + " Course";
+
+function completeCourse() {
+  window.location.href = "certificate.html";
+}
+</script>
+
+</body>
+</html>

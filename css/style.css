@@ -1,0 +1,23 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.course-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  width: 200px;
+  margin: 10px auto;
+  cursor: pointer;
+}
