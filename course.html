@@ -2,17 +2,99 @@
 <html>
 <head>
   <title>Course</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Page Background */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main Container */
+.course-container {
+  background: #ffffff;
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+/* Course Title */
+#courseTitle {
+  font-size: 28px;
+  color: #1f2937;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+/* Video Wrapper (Responsive) */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Complete Button */
+button {
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+    
+  </style>
 </head>
 <body>
 
-<h2 id="courseTitle"></h2>
+<div class="course-container">
+  <h2 id="courseTitle"></h2>
 
-<iframe width="560" height="315"
-  src="https://www.youtube.com/embed/VIDEO_ID"
-  allowfullscreen></iframe>
+  <div class="video-wrapper">
+    <iframe
+      src="https://www.youtube.com/embed/VIDEO_ID"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-<br><br>
-<button onclick="completeCourse()">Complete Course</button>
+  <button onclick="completeCourse()">Complete Course</button>
+</div>
+
 
 <script>
 document.getElementById("courseTitle").innerText =

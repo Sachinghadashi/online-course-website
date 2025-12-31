@@ -2,11 +2,75 @@
 <html>
 <head>
   <title>Certificate</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Page Background */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Certificate Card */
+.certificate-container {
+  background: #ffffff;
+  width: 420px;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+/* Title */
+.certificate-container h2 {
+  font-size: 26px;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.certificate-container p {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+/* Download Button */
+button {
+  background: #f59e0b;
+  color: #ffffff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d97706;
+  transform: translateY(-2px);
+}
+
+  </style>
 </head>
 <body>
 
-<h2>Download Certificate</h2>
-<button onclick="downloadPDF()">Download PDF</button>
+<div class="certificate-container">
+  <h2>Download Certificate</h2>
+  <p>Congratulations! You have successfully completed the course.</p>
+  <button onclick="downloadPDF()">Download PDF</button>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="js/certificate.js"></script>
